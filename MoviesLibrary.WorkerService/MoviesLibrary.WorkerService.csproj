@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-MoviesLibrary.WorkerService-f9498f2f-b253-4c16-8ce3-8a8c9869efce</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="30.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MoviesLibrary.Service\MoviesLibrary.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ReportsOutput\" />
+  </ItemGroup>
+</Project>

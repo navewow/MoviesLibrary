@@ -10,11 +10,16 @@ using System.Threading.Tasks;
 
 namespace MoviesLibrary.Service.Movies
 {
-    public class ActorService(IActorRepository actorRepository, IMapper mapper) : IActorService
+    public class ActorService : IActorService
     {
-        private readonly IActorRepository _actorRepository = actorRepository;
-        private readonly IMapper _mapper = mapper;
+        private readonly IActorRepository _actorRepository;
+        private readonly IMapper _mapper;
 
+        public ActorService(IActorRepository actorRepository, IMapper mapper)
+        {
+            _actorRepository = actorRepository;
+            _mapper = mapper;
+        }
         public async Task<List<ActorMoviesDto>> GetAllActorMovies()
         {
             var actorDb = await _actorRepository.GetActor(null, i => i.Include(i => i.Movies));

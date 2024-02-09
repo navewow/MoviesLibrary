@@ -10,17 +10,10 @@ using System.Threading.Tasks;
 
 namespace MoviesLibrary.Service.Movies
 {
-    public class GenreService : IGenreService
+    public class GenreService(IGenreRepository GenreRepository, IMapper mapper) : IGenreService
     {
-        private readonly IGenreRepository _GenreRepository;
-        private readonly IMapper _mapper;
-
-        public GenreService( IGenreRepository GenreRepository, IMapper mapper)
-        {
-            _GenreRepository = GenreRepository;
-            _mapper = mapper;
-
-        }
+        private readonly IGenreRepository _GenreRepository = GenreRepository;
+        private readonly IMapper _mapper = mapper;
 
         public async Task<List<GenreDto>> GetAllGenre()
         {

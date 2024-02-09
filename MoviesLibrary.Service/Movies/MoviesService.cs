@@ -11,16 +11,8 @@ using System.Threading.Tasks;
 namespace MoviesLibrary.Service.Movies
 {
    
-    public class MoviesService : IMoviesService
+    public class MoviesService(IMapper mapper, IMoviesRepository moviesRepository) : IMoviesService
     {
-        private readonly IMapper mapper; 
-        private readonly IMoviesRepository moviesRepository;
-        public MoviesService(IMapper mapper, IMoviesRepository moviesRepository)
-        {
-            this.mapper = mapper;
-            this.moviesRepository = moviesRepository;
-        }
-
         public async Task<MovieDetailsDto> GetMovieDetails(int id)
         {
             var moviesDb = await moviesRepository.GetMovies(m => m.Id.Equals(id), i => i.Include(i => i.Actors)

@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesLibrary.Common", "Mov
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workers", "Workers", "{AD7DD0C2-0D47-47E2-A268-0009190D9B18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesLibrary.WorkerService", "MoviesLibrary.WorkerService\MoviesLibrary.WorkerService.csproj", "{B1A4CA8B-0486-4BF1-8D4C-B4F3A64AFAF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesLibrary.WorkerService", "MoviesLibrary.WorkerService\MoviesLibrary.WorkerService.csproj", "{B1A4CA8B-0486-4BF1-8D4C-B4F3A64AFAF4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C2624D2-7543-4582-801E-853D5D81F209}"
 	ProjectSection(SolutionItems) = preProject
-		readme.txt = readme.txt
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Global
